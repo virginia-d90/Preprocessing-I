@@ -125,10 +125,17 @@ nav{
 		border-radius: 5px;
 		padding:1%;
 		margin:3%;
+		&:hover{
+			background-color: @background_main;
+			color: @background_accent;
+		}
 		
 	}//closes nav a
 	@media(max-width:500px){
 		.center();
+		a{
+			margin:0;
+		}
 	}//closes @media 500px
 }//closes nav
 
@@ -174,6 +181,12 @@ header{
 
 	@media(max-width: 500px){
 		flex-direction: column;
+		h2{
+			font-size: 2.5rem;
+		}
+		h3{
+			font-size: 2rem;
+		}
 		.left_section,.right_section{
 			width:90%;
 			margin: 3px;
@@ -194,7 +207,12 @@ header{
 		line-height: 2;
 		font-size: @font_size_standard;
 	}//closes li
-	
+	@media(max-width: 500px){
+		h4{
+			font-size: 2rem;
+		}
+		
+	}//closes @media 500px
 }//closes bottom_section
 
 footer{
