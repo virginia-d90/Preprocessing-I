@@ -1,1 +1,291 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Me5Q.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-U1Ug.ttf) format('truetype');
+}
+/*variables*/
+.outline {
+  border: 2px dotted black;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+body {
+  background-color: #708090;
+  font-family: 'Roboto', sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  text-transform: capitalize;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+}
+h1 {
+  font-size: 4rem;
+}
+h2 {
+  font-size: 3.5rem;
+}
+h3 {
+  font-size: 3rem;
+}
+h4 {
+  font-size: 2.5rem;
+}
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 1.6rem;
+  font-family: 'Roboto', sans-serif;
+}
+nav a {
+  text-decoration: none;
+  background-color: #DCDCDC;
+  color: #708090;
+  border-radius: 5px;
+  padding: 1%;
+  margin: 3%;
+}
+nav a:hover {
+  background-color: #708090;
+  color: #DCDCDC;
+}
+@media (max-width: 500px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  nav a {
+    margin: 0;
+  }
+}
+header {
+  background-color: #DCDCDC;
+  padding: 3%;
+}
+header img {
+  height: 15%;
+  width: 15%;
+}
+@media (max-width: 500px) {
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  header img {
+    height: 30%;
+    width: 30%;
+  }
+  header h1 {
+    width: 60%;
+    font-size: 2.5rem;
+  }
+}
+.middle_content {
+  display: flex;
+  padding: 4%;
+  justify-content: space-between;
+  line-height: 1.5;
+}
+.middle_content .left_section {
+  width: 45%;
+}
+.middle_content .right_section {
+  width: 45%;
+}
+.middle_content p,
+.middle_content li {
+  font-size: 1.6rem;
+}
+@media (max-width: 500px) {
+  .middle_content {
+    flex-direction: column;
+  }
+  .middle_content h2 {
+    font-size: 2.5rem;
+  }
+  .middle_content h3 {
+    font-size: 2rem;
+  }
+  .middle_content .left_section,
+  .middle_content .right_section {
+    width: 90%;
+    margin: 3px;
+    border: 2px dotted black;
+  }
+}
+.bottom_section {
+  width: 100%;
+  padding: 3%;
+  display: flex;
+  justify-content: space-around;
+}
+.bottom_section li {
+  line-height: 2;
+  font-size: 1.6rem;
+}
+@media (max-width: 500px) {
+  .bottom_section h4 {
+    font-size: 2rem;
+  }
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #DCDCDC;
+  font-size: 1.6rem;
+  padding: 3%;
+}
