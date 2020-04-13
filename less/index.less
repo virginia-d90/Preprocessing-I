@@ -49,11 +49,120 @@ table {
 }
 
 /* Set every element's box-sizing to border-box */
+//fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+/*variables*/
+@background_main:#708090;
+@background_accent:#DCDCDC;
+@font_size_standard: 1.6rem;
+@font_main:'Roboto', sans-serif;
+@font_headings: 'Open Sans', sans-serif;
+//mixins
+.center(){
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+}//closes .center mixin
+
+.font_headings(){
+	font-family: @font_headings;
+	font-weight: bold;
+}
 * {
     box-sizing: border-box;
 }
-
-html, body {
-    height: 100%;
+html{
+	font-size: 62.5%;
 }
+html, body {
+	height: 100%;
+	width: 100%;
+}
+body{
+	//margin: 10px 20px;
+	//padding: 1 2;
+	background-color: @background_main;
+	font-family: @font_main;
+}
+h1,h2,h3,h4,h5{
+	text-transform: capitalize;
+	.font_headings();
+}
+h1{
+	font-size: 4rem;
+}
+h2{
+	font-size: 3.5rem;
+}
+h3{
+	font-size: 3rem;
+	
+}
+h4{
+	font-size: 2.5rem;
+}
+nav{ 
+	width: 100%;
+	display:flex;
+	justify-content:flex-end;
+	font-size: @font_size_standard;
+	font-family: @font_main;
+	
 
+	a{
+		text-decoration: none;
+		margin:3%;	
+	}//closes nav a
+}//closes nav
+
+header{
+	background-color: @background_accent;
+	padding: 3%;
+	img{
+		height:15%;
+		width:15%;
+	}//closes img styles
+
+}//closes header styles
+.middle_content{
+	display: flex;
+	padding: 4%;
+	justify-content: space-between;
+	line-height: 1.5;
+
+	.left_section{
+		width:45%;
+	}//closes left_section
+
+	.right_section{
+		width: 45%;
+	}//closes right_section
+
+	p,li{
+		font-size: @font_size_standard;
+	}
+
+}//closes middle content
+
+.bottom_section{
+	width:100%;
+	padding: 3%;
+	display:flex;
+	justify-content: space-around;
+	
+
+	li{
+		line-height: 2;
+		font-size: @font_size_standard;
+	}//closes li
+	
+}//closes bottom_section
+
+footer{
+	.center();
+	background-color: @background_accent;
+	font-size: @font_size_standard;
+	padding: 3%;
+}
