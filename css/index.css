@@ -142,6 +142,9 @@ table {
   src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-U1Ug.ttf) format('truetype');
 }
 /*variables*/
+.outline {
+  border: 2px dotted black;
+}
 * {
   box-sizing: border-box;
 }
@@ -187,10 +190,15 @@ nav {
 }
 nav a {
   text-decoration: none;
+  background-color: #DCDCDC;
+  color: #708090;
+  border-radius: 5px;
+  padding: 1%;
   margin: 3%;
 }
 @media (max-width: 500px) {
   nav {
+    display: flex;
     flex-direction: column;
     align-items: center;
   }
@@ -233,6 +241,17 @@ header img {
 .middle_content p,
 .middle_content li {
   font-size: 1.6rem;
+}
+@media (max-width: 500px) {
+  .middle_content {
+    flex-direction: column;
+  }
+  .middle_content .left_section,
+  .middle_content .right_section {
+    width: 90%;
+    margin: 3px;
+    border: 2px dotted black;
+  }
 }
 .bottom_section {
   width: 100%;
