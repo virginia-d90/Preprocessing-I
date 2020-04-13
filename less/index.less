@@ -115,6 +115,10 @@ nav{
 		text-decoration: none;
 		margin:3%;	
 	}//closes nav a
+	@media(max-width:500px){
+		flex-direction: column;
+		align-items: center;
+	}//closes @media 500px
 }//closes nav
 
 header{
@@ -124,7 +128,22 @@ header{
 		height:15%;
 		width:15%;
 	}//closes img styles
+	@media(max-width:500px){
+		display:flex;
+		align-items: center;
+		justify-content: space-between;
 
+		img{
+			height: 30%;
+			width: 30%;
+		}//closes img in @media
+		
+		h1{
+			width: 60%;
+			font-size: 2.5rem;
+		}//closes h1 in @media
+
+	}//closes @media 500px
 }//closes header styles
 .middle_content{
 	display: flex;
@@ -142,7 +161,11 @@ header{
 
 	p,li{
 		font-size: @font_size_standard;
-	}
+	}//closes p,li
+
+	@media(max-width: 500px){
+		
+	}//closes @media 500px
 
 }//closes middle content
 
